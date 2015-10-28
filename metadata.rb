@@ -1,4 +1,4 @@
-name 'dse'
+name 'dse-mydrive'
 maintainer 'Daniel Parker'
 maintainer_email 'daniel.c.parker@target.com'
 license 'Apache 2.0'
