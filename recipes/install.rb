@@ -1,6 +1,6 @@
 # This recipe sets up the yum repos, directories, tuning settings, and installs the dse package.
 # Install java
-include_recipe 'dse::_repo'
+include_recipe 'dse-mydrive::_repo'
 include_recipe 'java' if node['dse']['manage_java']
 
 # Check for existing dse version and the version chef wants
@@ -62,4 +62,4 @@ directory node['cassandra']['commit_dir'] do
 end
 
 # do you want the datastax-agent for opscenter?
-include_recipe 'dse::datastax_agent' if node['datastax-agent']['enabled']
+include_recipe 'dse-mydrive::datastax_agent' if node['datastax-agent']['enabled']

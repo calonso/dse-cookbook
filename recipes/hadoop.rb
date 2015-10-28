@@ -5,7 +5,7 @@ node.default['cassandra']['num_tokens'] = '1'
 # hadoop likes to scan
 node.default['cassandra']['range_request_timeout_in_ms'] = '30000'
 
-include_recipe 'dse::default'
+include_recipe 'dse-mydrive::default'
 
 # set up the mapred template so we can do some config
 template "#{node['cassandra']['dse']['conf_dir']}/hadoop/mapred-site.xml" do

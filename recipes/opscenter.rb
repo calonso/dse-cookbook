@@ -16,7 +16,7 @@
 #
 
 # Set up the datastax repo in yum or apt depending on the OS
-include_recipe 'dse::_repo'
+include_recipe 'dse-mydrive::_repo'
 
 package 'opscenter' do
   version node['opscenter']['version']

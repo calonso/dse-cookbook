@@ -1,9 +1,9 @@
 # include the install recipe for datastax
-include_recipe 'dse::install'
+include_recipe 'dse-mydrive::install'
 
 # set up encryption if the attribute is set
 if node['cassandra']['dse']['internode_encryption'] != 'none'
-  include_recipe 'dse::ssl'
+  include_recipe 'dse-mydrive::ssl'
 end
 
 # set up the dse default file. This sets up hadoop, etc
@@ -91,4 +91,4 @@ when 'org.apache.cassandra.locator.PropertyFileSnitch'
 end
 
 # metrics?
-include_recipe 'dse::metrics' if node['cassandra']['metrics_reporter']['enabled']
+include_recipe 'dse-mydrive::metrics' if node['cassandra']['metrics_reporter']['enabled']
